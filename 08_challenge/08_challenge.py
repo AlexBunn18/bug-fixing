@@ -9,10 +9,11 @@ For all integers between 1 and 99 (include both):
     # print fizzbuzz for multiples of 3 and 5"
 """
 
-class Fizz_Buzz:
+
+class FizzBuzz:  # made CamelCase
     "Class to implement FizzBuzz for multiples of 3 and 5"
 
-    def fizzbuzz(max_num):
+    def fizzbuzz(self, max_num):  # was missing self as a parameter
         "This method implements FizzBuzz"
         
         # adding some redundant declarations on purpose
@@ -23,18 +24,20 @@ class Fizz_Buzz:
         num2 = 5 
 
         # Google for 'range in python' to see what it does
-        for i in range(1,max_num):
+        for i in range(1, max_num):
             # % or modulo division gives you the remainder 
-            if i%num1==0 and i%num2==0:
-                print(i,three_mul+five_mul)
-            elif i%num1==0:
-                print(i,three_mul)
-            elif i%num2==0:
-                print(i,five_mul)
+            if i % num1 == 0 and i % num2 == 0:
+                print(i, three_mul + five_mul)
+            elif i % num1 == 0:
+                print(i, three_mul)
+            elif i % num2 == 0:
+                print(i, five_mul)
+            else:
+                print(i)
 
-#----START OF SCRIPT
-if __name__=='__main__':
+
+# ----START OF SCRIPT
+if __name__ == '__main__':
     "Initialize the fizzbuzz object"
-    fizzbuzz_obj = Fizz_Buzz()
+    fizzbuzz_obj = FizzBuzz()
     fizzbuzz_obj.fizzbuzz(100)
-
