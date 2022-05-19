@@ -9,6 +9,7 @@ For all integers between 1 and 99 (include both):
     # print fizzbuzz for multiples of 3 and 5"
 """
 
+
 def fizzbuzz(max_num):
     "This method implements FizzBuzz"
     
@@ -20,15 +21,18 @@ def fizzbuzz(max_num):
     num2 = 5 
 
     # Google for 'range in python' to see what it does
-    for i in range(1,max_num):
-        # % or modulo division gives you the remainder 
-        if i%num1==0 and i%num2==0:
-        print(i,three_mul+five_mul)
-        elif i%num1==0:
-            print(i,three_mul)
-        elif i%num2==0:
-            print(i,five_mul)
+    for i in range(1, max_num):
+        # % or modulo division gives you the remainder
+        if i % num1 == 0 and i % num2 == 0:
+            print(i, three_mul + five_mul)  # this wasn't indented
+        elif i % num1 == 0:
+            print(i, three_mul)
+        elif i % num2 == 0:
+            print(i, five_mul)
+        else:
+            print(i)
 
-#----START OF SCRIPT
-if __name__=='__main__':
+
+# ----START OF SCRIPT
+if __name__ == '__main__':
     fizzbuzz(100)
